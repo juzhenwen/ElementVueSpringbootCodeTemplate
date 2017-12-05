@@ -15,4 +15,21 @@ public class ServiceCfg {
 	private String name;
 
 	private List<ConnectorCfg> connectors;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<ConnectorCfg> getConnectors() {
+		return connectors;
+	}
+
+	public void setConnectors(List<ConnectorCfg> connectors) {
+		this.connectors = connectors;
+	}
+	
 }

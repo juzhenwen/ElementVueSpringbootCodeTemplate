@@ -16,4 +16,29 @@ public class ConnectorCfg {
 
 	@XStreamAsAttribute
 	String executor;
+
+	public int getPort() {
+		return port;
+	}
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+
+	public String getProtocol() {
+		return protocol;
+	}
+
+	public void setProtocol(String protocol) {
+		this.protocol = protocol;
+	}
+
+	public String getExecutor() {
+		return executor;
+	}
+
+	public void setExecutor(String executor) {
+		this.executor = executor;
+	}
+	
 }

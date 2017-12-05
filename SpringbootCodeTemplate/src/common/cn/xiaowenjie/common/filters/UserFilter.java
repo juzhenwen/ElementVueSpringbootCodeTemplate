@@ -50,7 +50,13 @@ public class UserFilter implements Filter {
 
 		chain.doFilter(request, response);
 
-		printAllFilters(chain);
+		try {
+			printAllFilters(chain);
+		} catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		printResponseInfo((HttpServletResponse) response);
 
 		clearAllUserInfo();
@@ -61,7 +67,7 @@ public class UserFilter implements Filter {
 	}
 
 	@SneakyThrows
-	private void printAllFilters(FilterChain chain) {
+	private void printAllFilters(FilterChain chain) throws NoSuchFieldException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		ApplicationFilterChain filterChain = (ApplicationFilterChain) chain;
 
 		// 读取私有变量 filters

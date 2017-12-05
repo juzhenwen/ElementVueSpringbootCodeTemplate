@@ -60,4 +60,44 @@ public class PageReq {
 
 		return pageable;
 	}
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
+	public int getPagesize() {
+		return pagesize;
+	}
+
+	public void setPagesize(int pagesize) {
+		this.pagesize = pagesize;
+	}
+
+	public String getSortfield() {
+		return sortfield;
+	}
+
+	public void setSortfield(String sortfield) {
+		this.sortfield = sortfield;
+	}
+
+	public String getSort() {
+		return sort;
+	}
+
+	public void setSort(String sort) {
+		this.sort = sort;
+	}
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
 }

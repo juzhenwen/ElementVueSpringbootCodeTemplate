@@ -37,4 +37,44 @@ public class ResultBean<T> implements Serializable {
 		this.msg = e.toString();
 		this.code = FAIL;
 	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public T getData() {
+		return data;
+	}
+
+	public void setData(T data) {
+		this.data = data;
+	}
+
+	public static int getNoLogin() {
+		return NO_LOGIN;
+	}
+
+	public static int getSuccess() {
+		return SUCCESS;
+	}
+
+	public static int getFail() {
+		return FAIL;
+	}
+
+	public static int getNoPermission() {
+		return NO_PERMISSION;
+	}
 }
